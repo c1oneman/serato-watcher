@@ -1,4 +1,4 @@
-# Serato Status Logger (SSL)
+# Serato Watcher (SSL)
 
 A Java application that monitors Serato DJ Pro and logs track information and deck status changes.
 
@@ -43,13 +43,17 @@ A Java application that monitors Serato DJ Pro and logs track information and de
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/serato-status-logger.git
-   cd serato-status-logger
+   git clone git@github.com:c1oneman/serato-watcher.git
+   cd serato-watcher
    ```
 
 2. Build the project:
    ```bash
    mvn clean install
+   ```
+   or
+   ```bach
+   mvn spring-boot:run
    ```
 
 ## Running the Application
@@ -69,8 +73,9 @@ A Java application that monitors Serato DJ Pro and logs track information and de
 By default, the application:
 
 - Listens on port 8080 for WebSocket connections
+- localhost:8080/track-status is the only socket
 - Monitors Serato DJ Pro's session files
-- Tracks deck status changes and crossfader positions
+- Tracks deck status changes
 
 ## Troubleshooting
 
